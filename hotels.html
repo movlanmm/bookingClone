@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header style="margin-bottom: 20px;">
+        <div class="container w-75 pb-4">
+            <nav class="navbar navbar-expand-lg w-100 d-flex justify-content-between">
+                <a class="navbar-brand text-white" href="index.html">Booking.com</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-flex justify-content-end gap-2" id="navbarSupportedContent">
+
+                    <button type="button" class="btn text-white fw-bold py-2 currency">
+                        AZN
+                    </button>
+
+                    <button type="button" class="btn py-2 lang">
+                        <img src="./assets/flag.png">
+                    </button>
+
+                    <a type="button" href="#" class="btn text-white py-2 d-flex align-items-center help">
+                        <i class="fa-regular fa-circle-question fs-5"></i>
+                    </a>
+
+                    <a type="button" href="#" class="btn text-white py-2 d-flex align-items-center help">
+                        <span>List your property</span>
+                    </a>
+
+                    <a type="button" href="#" class="btn btn-sm text-primary bg-body">
+                        Register
+                    </a>
+
+                    <a type="button" href="#" class="btn btn-sm text-primary bg-body">
+                        Sign in
+                    </a>
+                </div>
+            </nav>
+            <div class="header-links row ">
+                <div class="col-12 d-flex gap-3">
+                    <a href="#" class="btn rounded-5 active">
+                        <i class="fa-solid fa-bed me-1"></i>
+                        <span>Stays</span>
+                    </a>
+
+                    <a href="#" class="btn link text-white rounded-5">
+                        <i class="fa-solid fa-plane me-1"></i>
+                        <span>Flights</span>
+                    </a>
+
+                    <a href="#" class="btn link text-white rounded-5">
+                        <i class="fa-solid fa-car me-1"></i>
+                        <span>Car rentals</span>
+                    </a>
+
+                    <a href="#" class="btn link text-white rounded-5">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>Attractions</span>
+                    </a>
+
+                    <a href="#" class="btn link text-white rounded-5">
+                        <i class="fa-solid fa-taxi me-1"></i>
+                        <span>Airport taxis</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb-section">
+        <div class="container w-75 p-0">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="trendings.html">Trendings</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Hotel</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <main>
+        <div class="container w-75 p-0">
+            <div class="row">
+                <div class="col-3">
+                    <div class="match-button w-100 text-center mb-2">
+                        <button>
+                            <i class="fa-solid fa-tag"></i>
+                            We Price Match
+                        </button>
+                    </div>
+
+                    <form class="hotel-form py-3 px-3 mb-2">
+                        <h5>Search</h5>
+
+                        <label>Destination/property name:</label>
+                        <div class="input-group">
+                            <span class="input-group-text border-0 bg-body rounded-0" id="basic-addon1"><i
+                                    class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text" class="form-control border-0 rounded-0"
+                                placeholder="Where are you going?" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+
+                        <label>Check-in date</label>
+                        <div class="input-group">
+                            <span class="input-group-text border-0 bg-body rounded-0" id="basic-addon1"><i
+                                    class="fa-solid fa-calendar-days"></i></span>
+                            <input type="text" class="form-control border-0 rounded-0" placeholder="Wednesday,January 3"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                            <span class="input-group-text border-0 bg-body rounded-0" id="basic-addon1"><i
+                                    class="fa-solid fa-chevron-down"></i></span>
+
+                        </div>
+
+                        <label>Check-out date</label>
+                        <div class="input-group">
+                            <span class="input-group-text border-0 bg-body rounded-0" id="basic-addon1"><i
+                                    class="fa-solid fa-calendar-days"></i></span>
+                            <input type="text" class="form-control border-0 rounded-0" placeholder="Wednesday,January 3"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                            <span class="input-group-text border-0 bg-body rounded-0" id="basic-addon1">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+
+                        <label>3-night stay</label>
+                        <div class="input-group mb-2">
+                            <span class="input-group-text border-0 bg-body rounded-0" id="basic-addon1"><i
+                                    class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text" class="form-control border-0 rounded-0"
+                                placeholder="2 adult &#183; 0 childiren &#183; 1 room" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                            <span class="input-group-text border-0 bg-body rounded-0" id="basic-addon1">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+
+                        <div class="terms d-flex">
+                            <div class="input-group d-flex align-items-center">
+                                <input type="checkbox" id="term" class="me-1">
+                                <label for="term">Entire homes & apartments</label>
+                            </div>
+                            <i class="fa-regular fa-circle-question ms-auto" style="width: 14px;"></i>
+                        </div>
+
+                        <div class="terms d-flex mt-1">
+                            <div class="input-group d-flex align-items-center">
+                                <input type="checkbox" id="term" class="me-1">
+                                <label for="term">I'm traveling for work</label>
+                            </div>
+                            <i class="fa-regular fa-circle-question ms-auto" style="width: 14px;"></i>
+                        </div>
+
+                        <button class="btn btn-primary btn-lg rounded-0 w-100 mt-2 mb-3"
+                            style="font-size: 16px; font-weight: 400;">Search</button>
+                    </form>
+
+                    <div class="card text-bg-dark border-0 rounded-2">
+                        <a href="#">
+                            <img src="./assets/map-img.png" class="card-img" alt="...">
+                            <div class="card-img-overlay d-flex flex-column align-items-center justify-content-end">
+                                <i class="fa-solid fa-location-dot text-primary fs-1"></i>
+                                <button class="btn btn-primary mt-3">Show on map</button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <ul class="nav hotel-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Info &amp; prices</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Facilities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">House rules</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">The fine print</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Guest reviews(3,605)</a>
+                        </li>
+                    </ul>
+
+                    <div class="hotel-info  d-flex align-items-center justify-content-between">
+                        <div class="stars">
+                            <i class="fa-solid fa-star" style="color: orange; font-size: 12px;"></i>
+                            <i class="fa-solid fa-star" style="color: orange; font-size: 12px;"></i>
+                            <i class="fa-solid fa-star" style="color: orange; font-size: 12px;"></i>
+                            <i class="fa-solid fa-star" style="color: orange; font-size: 12px;"></i>
+
+                            <div class="badge ms-3" style="background-color: rgba(0, 128, 0, 0.108);">
+                                <i class="fa-solid fa-leaf" style="color: green; font-size: 15px;"></i>
+                                <i class="fa-solid fa-leaf" style="color: green; font-size: 15px;"></i>
+                                <i class="fa-solid fa-leaf" style="color: green; font-size: 15px;"></i>
+                                <span style="color: green; font-weight: 300;">Travel Sustainable Level 3</span>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn text-primary fs-4"><i class="fa-regular fa-heart"></i></button>
+                            <button class="btn text-primary fs-4"><i class="fa-solid fa-share-nodes"></i></button>
+                            <button class=" btn btn-primary rounded-0" style="font-size: 14px;">Reserve</button>
+                        </div>
+                    </div>
+
+                    <div class="hotel-name d-flex justify-content-between">
+                        <h2>Vida Creek Harbour</h2>
+                        <button class="border-0">
+                            <i class="fa-solid fa-tag me-1"></i>
+                            We Price Match
+                        </button>
+                    </div>
+
+                    <div class="hotel-location">
+                        <i class="fa-solid fa-location-dot text-primary"></i>
+                        <span>Dubai Creek Harbour, Dubai, United Arab Emirates – </span>
+                        <a href="#"> Excellent location – show map</a>
+                    </div>
+
+                    <div class="hotel-gallery d-flex flex-column align-items-center justify-content-center">
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="#">
+                                    <img src="./assets/hotel-img1.jpeg" class="w-100 mb-2">
+                                    <img src="./assets/hotel-img1.jpeg" class="w-100">
+                                </a>
+
+                            </div>
+                            <div class="col-8">
+                                <a href="#"> <img src="./assets/hotel-img2.jpeg" class="w-100" style="height: 97%;"></a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <a href="#"><img src="./assets/hotel-img3.jpeg" class="w-100" style="height: 95%;"></a>
+                            </div>
+                            <div class="col">
+                                <a href="#"><img src="./assets/hotel-img3.jpeg" class="w-100" style="height: 95%;"></a>
+                            </div>
+                            <div class="col">
+                                <a href="#"><img src="./assets/hotel-img3.jpeg" class="w-100" style="height: 95%;"></a>
+                            </div>
+                            <div class="col">
+                                <a href="#"><img src="./assets/hotel-img3.jpeg" class="w-100" style="height: 95%;"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <ul class="ps-0 d-flex mb-1">
+                        <li style="border: 1px solid lightgray; margin: 8px 8px 0 0;" class="py-3 pe-5 ps-4">
+                            <div class="d-flex align-items-center w-100 pe-3 ">
+                                <i class="fa-regular fa-building fs-2 me-3"></i>
+                                <span style="font-size: 14px;">City view</span>
+                            </div>
+                        </li>
+                        <li style="border: 1px solid lightgray; margin: 8px 8px 0 0" class="py-3 pe-5 ps-4">
+                            <div class="d-flex align-items-center w-100 pe-3 ">
+                                <i class="fa-regular fa-building fs-2 me-3"></i>
+                                <span style="font-size: 14px;">Pet friendly</span>
+                            </div>
+                        </li>
+                        <li style="border: 1px solid lightgray; margin: 8px 8px 0 0" class="py-3 pe-5 ps-4 flex-grow-1">
+                            <div class="d-flex align-items-center w-100 pe-3 ">
+                                <i class="fa-regular fa-building fs-2 me-3"></i>
+                                <span style="font-size: 14px;">Outdoor swimming pool</span>
+                            </div>
+                        </li>
+                        <li style="border: 1px solid lightgray; margin: 8px 8px 0 0" class="py-3 pe-5 ps-4">
+                            <div class="d-flex align-items-center w-100 pe-3 ">
+                                <i class="fa-regular fa-building fs-2 me-3"></i>
+                                <span style="font-size: 14px;">Free wifi</span>
+                            </div>
+                        </li>
+                        <li style="border: 1px solid lightgray; margin: 8px 0 0 0" class="py-3 pe-5 ps-4">
+                            <div class="d-flex align-items-center w-100 pe-4 ">
+                                <i class="fa-regular fa-building fs-2 me-3"></i>
+                                <span style="font-size: 14px;">Terrace</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="d-flex p-0">
+                        <li style="border: 1px solid lightgray; margin: 8px 8px 0 0" class="py-3 pe-5 ps-4">
+                            <div class="d-flex align-items-center w-100 pe-3">
+                                <i class="fa-regular fa-building fs-2 me-3"></i>
+                                <span style="font-size: 14px;">Balcony</span>
+                            </div>
+                        </li>
+                        <li style="border: 1px solid lightgray; margin: 8px 8px 0 0" class="py-3 pe-5 ps-4">
+                            <div class="d-flex align-items-center w-100 pe-3">
+                                <i class="fa-regular fa-building fs-2 me-3"></i>
+                                <span style="font-size: 14px;">Free parking</span>
+                            </div>
+                        </li>
+                        <li style="border: 1px solid lightgray; margin: 8px 8px 0 0" class="py-3 pe-5 ps-4">
+                            <div class="d-flex align-items-center w-100 pe-3">
+                                <i class="fa-regular fa-building fs-2 me-3"></i>
+                                <span style="font-size: 14px;">Bathtub</span>
+                            </div>
+                        </li>
+                        <li style="border: 1px solid lightgray; margin: 8px 8px 0 0" class="py-3 pe-5 ps-4">
+                            <div class="d-flex align-items-center w-100 pe-3">
+                                <i class="fa-regular fa-building fs-2 me-3"></i>
+                                <span style="font-size: 14px;">Air conditioning</span>
+                            </div>
+                        </li>
+                        <li style="border: 1px solid lightgray; margin: 8px 0 0 0" class="py-3 pe-5 ps-4 flex-grow-1">
+                            <div class="d-flex align-items-center w-100 pe-3">
+                                <i class="fa-regular fa-building fs-2 me-3"></i>
+                                <span style="font-size: 14px;">24-hour front desk</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col-9">
+                    <p style="font-size: 14px; color: #262626;">Located in Dubai, 6.2 mi from Dubai Aquarium &
+                        Underwater Zoo, Vida Creek Harbor provides
+                        accommodations with two restaurants, free private parking and a fitness center. All rooms
+                        feature a flat-screen TV with satellite channels and a private bathroom. The accommodations
+                        features a 24-hour front desk, room service and currency exchange for guests.
+                        <br><br>
+                        All units in the hotel are equipped with a kettle.
+                        <br><br>
+                        A continental breakfast is available daily at Vida Creek Harbor.
+                        <br><br>
+                        The accommodations offers 4-star accommodations.
+                        <br><br>
+                        Dubai Mall is 6.2 mi from Vida Creek Harbor, while The Dubai Fountain is 6.8 mi away. The
+                        nearest airport is Dubai International Airport, 11 mi from the hotel.
+                        <br><br>
+                        Couples in particular like the location – they rated it 9.1 for a two-person trip.
+                        <br><br>
+                        Hotel chain/brand: Vida Hotels and Resorts
+                        <br><br>
+                        <span style="font-size: 12px; color: #6b6b6b;">Distance in property description is calculated
+                            using © OpenStreetMap</span>
+                    </p>
+
+                    <h5>Most popular facilities</h5>
+                    <ul class="p-0 d-flex flex-wrap gap-4 mt-3" style="width: 80%;">
+                        <li>
+                            <i class="fa-solid fa-person-swimming me-2" style="color: green;"></i>
+                            <span style="font-size: 14px; color: #262626;">Outdoor swimming pool</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-person-swimming me-2" style="color: green;"></i>
+                            <span style="font-size: 14px; color: #262626;">Fitness center</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-person-swimming me-2" style="color: green;"></i>
+                            <span style="font-size: 14px; color: #262626;">Non smoking rooms</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-person-swimming me-2" style="color: green;"></i>
+                            <span style="font-size: 14px; color: #262626;">3 restaurants</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-person-swimming me-2" style="color: green;"></i>
+                            <span style="font-size: 14px; color: #262626;">Room service</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-person-swimming me-2" style="color: green;"></i>
+                            <span style="font-size: 14px; color: #262626;">Free parking</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-person-swimming me-2" style="color: green;"></i>
+                            <span style="font-size: 14px; color: #262626;">Free wifi</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-person-swimming me-2" style="color: green;"></i>
+                            <span style="font-size: 14px; color: #262626;">Facilities for disabled guests</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-person-swimming me-2" style="color: green;"></i>
+                            <span style="font-size: 14px; color: #262626;">Tea/Coffee Maker in All Rooms</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-person-swimming me-2" style="color: green;"></i>
+                            <span style="font-size: 14px; color: #262626;">Good breakfast</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <div class="hotel-logo text-center p-4" style="border: 1px solid #e4f4ff;">
+                        <img src="./assets/hotel-logo.webp" class="w-50">
+                    </div>
+
+                    <div class="property-highlights p-3 mt-2" style="background-color: #e4f4ff;">
+                        <h6 class="mb-2">Property Highlights</h6>
+                        <h4 style="font-size: 14px;">Perfect for a 3-night stay!</h4>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fa-brands fa-gratipay  me-2"></i>
+                            <span style="font-size: 13px; color: #262626;"> Top Location: Highly rated by recent guests
+                                (9.0)</span>
+                        </div>
+                        <h4 style="font-size: 14px;">Rooms with:</h4>
+                        <span style="font-size: 13px; color: #262626;"><i
+                                class="fa-solid fa-chair me-2"></i>Terrace</span>
+                        <div class="d-flex align-items-center mb-3 mt-3">
+                            <i class="fa-solid fa-parking  me-2"></i>
+                            <span style="font-size: 13px; color: #262626;"> Free private parking available at the
+                                hotel</span>
+                        </div>
+                        <h4 style="font-size: 14px;">Loyal Customers</h4>
+
+                        <div class="d-flex align-items-center mb-3 mt-2">
+                            <i class="fa-solid fa-check  me-2"></i>
+                            <span style="font-size: 13px; color: #262626;"> There are more repeat guests here than most
+                                other properties.</span>
+                        </div>
+                        <h4 style="font-size: 14px;">Travel Sustainable Level 3</h4>
+
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fa-solid fa-leaf  me-2"></i>
+                            <span style="font-size: 13px; color: #262626;"> This property has taken <a href=""
+                                    style="text-decoration: none;">21 out of 29 sustainability steps</a> to make your
+                                stay more sustainable.</span>
+                        </div>
+
+                        <button class="btn btn-primary w-100 rounded-0">Reserve</button>
+                    </div>
+
+                </div>
+
+                <div class="faq col-12 d-flex align-items-center justify-content-between mt-3 mb-4">
+                    <h4>Travelers are asking</h4>
+                    <button class="btn btn-primary rounded-0" style="font-size: 14px;">See availability</button>
+                </div>
+
+                <div class="col-4">
+                    <ul class="p-4 m-0 border">
+                        <li class="d-flex w-100 align-items-center justify-content-between border-bottom pb-3 pt-3">
+                            <p class="m-0" style="font-size: 14px; color: #262626;"><i
+                                    class="fa-regular fa-comments me-2"></i>Do you serve breakfast?</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="d-flex w-100 align-items-center justify-content-between border-bottom pb-3 pt-3">
+                            <p class="m-0" style="font-size: 14px; color: #262626;"><i
+                                    class="fa-regular fa-comments me-2"></i>Do you serve breakfast?</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="d-flex w-100 align-items-center justify-content-between border-bottom pb-3 pt-3">
+                            <p class="m-0" style="font-size: 14px; color: #262626;"><i
+                                    class="fa-regular fa-comments me-2"></i>Do you serve breakfast?</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="d-flex w-100 align-items-center justify-content-between border-bottom pb-3 pt-3">
+                            <p class="m-0" style="font-size: 14px; color: #262626;"><i
+                                    class="fa-regular fa-comments me-2"></i>Do you serve breakfast?</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="d-flex w-100 align-items-center justify-content-between pt-3 pb-3">
+                            <p class="m-0" style="font-size: 14px; color: #262626;"><i
+                                    class="fa-regular fa-comments me-2"></i>Do you serve breakfast?</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul class="p-4 m-0 border">
+                        <li class="d-flex w-100 align-items-center justify-content-between border-bottom pb-3 pt-3">
+                            <p class="m-0" style="font-size: 14px; color: #262626;"><i
+                                    class="fa-regular fa-comments me-2"></i>Do you serve breakfast?</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="d-flex w-100 align-items-center justify-content-between border-bottom pb-3 pt-3">
+                            <p class="m-0" style="font-size: 14px; color: #262626;"><i
+                                    class="fa-regular fa-comments me-2"></i>Do you serve breakfast?</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="d-flex w-100 align-items-center justify-content-between border-bottom pb-3 pt-3">
+                            <p class="m-0" style="font-size: 14px; color: #262626;"><i
+                                    class="fa-regular fa-comments me-2"></i>Do you serve breakfast?</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="d-flex w-100 align-items-center justify-content-between border-bottom pb-3 pt-3">
+                            <p class="m-0" style="font-size: 14px; color: #262626;"><i
+                                    class="fa-regular fa-comments me-2"></i>Do you serve breakfast?</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="d-flex w-100 align-items-center justify-content-between pt-3 pb-3">
+                            <p class="m-0" style="font-size: 14px; color: #262626;"><i
+                                    class="fa-regular fa-comments me-2"></i>Do you serve breakfast?</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="height: 100%;">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <h4>Still looking?</h4>
+                            <button class="btn btn-outline-primary rounded-0" style="margin-top: 24px;">Ask a
+                                question</button>
+                            <p style="font-size: 14px; color: #262626; margin-top: 24px;">We have an instant answer to
+                                most questions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <button class="btn btn-outline-primary rounded-0">See other questions (9)</button>
+                </div>
+
+                <div class="col-12 d-flex align-items-center justify-content-between mt-3">
+                    <h4>Hotel area info</h4>
+                    <button class="btn btn-primary rounded-0" style="font-size: 14px;">See availability</button>
+                </div>
+                <div class="col-12 mb-4">
+                    <span
+                        style="font-size: 12px; color: #003580; background-color: #e4f4ff; padding: 3px; margin-right: 5px;">Guests
+                        loved walking around the neighborhood!</span>
+                    <a href="#" style="font-size: 14px; color: #0071c2; text-decoration: none;">Excellent location –
+                        show map</a>
+                </div>
+
+                <div class="col-4 pe-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fa-solid fa-person-walking me-2 fs-5"></i>
+                        <h5 class="m-0">What's nearby</h5>
+                    </div>
+                    <ul class="p-0">
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4 pe-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fa-solid fa-person-walking me-2 fs-5"></i>
+                        <h5 class="m-0">What's nearby</h5>
+                    </div>
+                    <ul class="p-0">
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fa-solid fa-person-walking me-2 fs-5"></i>
+                        <h5 class="m-0">What's nearby</h5>
+                    </div>
+                    <ul class="p-0">
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fa-solid fa-person-walking me-2 fs-5"></i>
+                        <h5 class="m-0">What's nearby</h5>
+                    </div>
+                    <ul class="p-0">
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <p style="font-size: 14px; color: #262626;">Kart Mania Sport Tracks</p>
+                            <span style="font-size: 14px; color: #6b6b6b;">2.1km</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="sign-up mt-3">
+        <div class="container d-flex flex-column align-items-center justify-content-center">
+            <p class="text-white">Save time, save money!</p>
+            <span>Sign up and we'll send the best deals to you</span>
+            <div class="input-group gap-2 justify-content-center">
+                <input type="email" placeholder="Your email address" class="from-control">
+                <button class="btn btn-primary">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container w-75 p-0">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-12 text-center mt-5">
+                    <a href="#" class="text-decoration-none login">Extranet Log-in</a>
+                </div>
+                <div class="col-12 mt-3">
+                    <small style="font-size: 11px; color: #1a1a1a;">
+                        Copyright © 1996–2024 Booking.com™. All rights reserved.
+                    </small>
+                </div>
+
+                <div class="col-12 text-center mt-5">
+                    <span style="font-size: 12px; color: #6b6b6b;">Booking.com is part of Booking Holdings Inc., the
+                        world leader in online travel and related services.</span>
+                </div>
+
+                <div class="col  d-flex justify-content-center gap-5 p-4">
+                    <img src="./assets/footer-img.png" alt="">
+                    <img src="./assets/footer-img.png" alt="">
+                    <img src="./assets/footer-img.png" alt="">
+                    <img src="./assets/footer-img.png" alt="">
+                    <img src="./assets/footer-img.png" alt="">
+                    <img src="./assets/footer-img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container w-75">
+            <nav class="navbar navbar-expand-lg w-100 d-flex justify-content-between">
+                <a class="navbar-brand text-white" href="#">Booking.com</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-flex justify-content-end gap-2" id="navbarSupportedContent">
+
+                    <button type="button" class="btn text-white fw-bold py-2 currency">
+                        AZN
+                    </button>
+
+                    <button type="button" class="btn py-2 lang">
+                        <img src="./assets/flag.png">
+                    </button>
+
+                    <a type="button" href="#" class="btn text-white py-2 d-flex align-items-center help">
+                        <i class="fa-regular fa-circle-question fs-5"></i>
+                    </a>
+
+                    <a type="button" href="#" class="btn text-white py-2 d-flex align-items-center help">
+                        <span>List your property</span>
+                    </a>
+
+                    <a type="button" href="#" class="btn btn-sm text-primary bg-body">
+                        Register
+                    </a>
+
+                    <a type="button" href="#" class="btn btn-sm text-primary bg-body">
+                        Sign in
+                    </a>
+                </div>
+            </nav>
+            <div class="header-links row">
+                <div class="col-12 d-flex gap-3">
+                    <a href="#" class="btn rounded-5 active">
+                        <i class="fa-solid fa-bed me-1"></i>
+                        <span>Stays</span>
+                    </a>
+
+                    <a href="#" class="btn link text-white rounded-5">
+                        <i class="fa-solid fa-plane me-1"></i>
+                        <span>Flights</span>
+                    </a>
+
+                    <a href="#" class="btn link text-white rounded-5">
+                        <i class="fa-solid fa-car me-1"></i>
+                        <span>Car rentals</span>
+                    </a>
+
+                    <a href="#" class="btn link text-white rounded-5">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>Attractions</span>
+                    </a>
+
+                    <a href="#" class="btn link text-white rounded-5">
+                        <i class="fa-solid fa-taxi me-1"></i>
+                        <span>Airport taxis</span>
+                    </a>
+                </div>
+
+                <div class="header-title col-12 text-white">
+                    <h1>Find your next stay</h1>
+                    <p>Search deals on hotels, homes, and much more...</p>
+                </div>
+            </div>
+
+            <form class="header-searchbox">
+                <div class="form-row row  p-1 rounded-2 d-flex gap-1 flex-nowrap">
+                    <div class="col-4 bg-white rounded-1 d-flex align-items-center form-field">
+                        <i class="fa-solid fa-bed me-2 text-black fs-5"></i>
+                        <input type="text" placeholder="Where are you going?" class="border-0 flex-grow-1 py-3">
+                    </div>
+                    <div class="col-3 bg-white rounded-1 d-flex align-items-center form-field" id="data-picker">
+                        <i class="fa-solid fa-calendar-days me-2 fs-5"></i>
+                        <input type="text" class="border-0 flex-grow-1 py-3"
+                            placeholder="Check-in Date - Check-out Date">
+                    </div>
+                    <div class="col-3 bg-white rounded-1 d-flex align-items-center form-field">
+                        <button class="border-0 bg-body">
+                            <i class="fa-solid fa-user me-2 fs-5"></i>
+                            <span>2 adults · 0 children · 1 room</span>
+                        </button>
+                    </div>
+                    <div class="col-2 ps-0">
+                        <button class="btn btn-primary w-100 py-3">Search</button>
+                    </div>
+                </div>
+
+                <div class="row terms">
+                    <div class="col-12 p-0">
+                        <input type="checkbox" style="transform: scale(1.5);" class="me-2 ms-1">
+                        <label>I'm looking for an entire home or apartment</label>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+    </header>
+
+    <section class="offers">
+        <div class="container w-75 p-0">
+            <h3>Offers</h3>
+            <p>Promotions, deals, and special offers for you</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card rounded-1 ">
+                        <div class="row d-flex align-items-center px-2">
+                            <div class="col-8">
+                                <h5>Work, relax, or do a bit of both</h5>
+                                <p>Browse properties offering extended stays, many with reduced monthly rates</p>
+                                <button class="btn btn-primary">Find a stay</button>
+                            </div>
+                            <div class="col-4">
+                                <img src="./assets/card-img-1.jpeg" style="height: 180px;" class="rounded-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="card"
+                        style="background-image: url(./assets/card-img-2.jpeg); height: 180px; background-size: cover; background-repeat: no-repeat;">
+                        <div class="row align-items-center h-100 px-2">
+                            <div class="col-8 text-white">
+                                <h5>Work, relax, or do a bit of both</h5>
+                                <p class="text-white">Browse properties offering extended stays, many with reduced
+                                    monthly rates</p>
+                                <button class="btn btn-primary">Find Late Escape Deals</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <section class="explore">
+        <div class="container w-75 p-0">
+            <h3>Explore Azerbaijan</h3>
+            <p>These popular destinations have a lot to offer</p>
+
+            <div class="row gap-3 ms-1">
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 10.5rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/explore-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Baku</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">2.219 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 10.5rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/explore-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Baku</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">2.219 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 10.5rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/explore-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Baku</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">2.219 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 10.5rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/explore-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Baku</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">2.219 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 10.5rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/explore-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Baku</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">2.219 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 10.5rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/explore-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Baku</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">2.219 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="browse">
+        <div class="container w-75 p-0">
+            <h3 class="mb-3">Browse by property type in Baku</h3>
+
+            <div class="row gap-3 ms-1">
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.2rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/browse-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Hotels</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    Jan 3-Jan 6, 2 adults
+                                    <br>
+                                    242 available
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.2rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/browse-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Hotels</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    Jan 3-Jan 6, 2 adults
+                                    <br>
+                                    242 available
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.2rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/browse-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Hotels</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    Jan 3-Jan 6, 2 adults
+                                    <br>
+                                    242 available
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.2rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/browse-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Hotels</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    Jan 3-Jan 6, 2 adults
+                                    <br>
+                                    242 available
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trending">
+        <div class="container w-75 p-0">
+            <h3>Trending destinations</h3>
+            <p>Most popular choices for travelers from Azerbaijan</p>
+
+            <div class="row d-flex flex-nowrap gap-2 ms-1">
+                <div class="col-6 p-0">
+                    <div class="card" style="height: 270px;">
+                        <a href="trendings.html">
+                            <img src="./assets/trending-img.jpeg" class="card-img"
+                                style="height: 270px; object-fit: cover;">
+                            <div class="card-img-overlay text-white">
+                                <h4 class="card-title">Baku <img src="./assets/flag.png"
+                                        style="width: 24px; height: 20px;">
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 p-0">
+                    <div class="card" style="height: 270px;">
+                        <a href="trendings.html">
+                            <img src="./assets/trending-img.jpeg" class="card-img"
+                                style="height: 270px; object-fit: cover;">
+                            <div class="card-img-overlay text-white">
+                                <h4 class="card-title">Baku <img src="./assets/flag.png"
+                                        style="width: 24px; height: 20px;">
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ms-1 d-flex flex-nowrap gap-1 mt-3">
+                <div class="col-4 ps-0">
+                    <div class="card" style="height: 270px;">
+                        <a href="trendings.html">
+                            <img src="./assets/trending-img.jpeg" class="card-img"
+                                style="height: 270px; object-fit: cover;">
+                            <div class="card-img-overlay text-white">
+                                <h4 class="card-title">Baku <img src="./assets/flag.png"
+                                        style="width: 24px; height: 20px;">
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 ps-0">
+                    <div class="card" style="height: 270px;">
+                        <a href="trendings.html">
+                            <img src="./assets/trending-img.jpeg" class="card-img"
+                                style="height: 270px; object-fit: cover;">
+                            <div class="card-img-overlay text-white">
+                                <h4 class="card-title">Baku <img src="./assets/flag.png"
+                                        style="width: 24px; height: 20px;">
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 pe-0">
+                    <div class="card" style="height: 270px;">
+                        <a href="trendings.html">
+                            <img src="./assets/trending-img.jpeg" class="card-img"
+                                style="height: 270px; object-fit: cover;">
+                            <div class="card-img-overlay text-white">
+                                <h4 class="card-title">Baku <img src="./assets/flag.png"
+                                        style="width: 24px; height: 20px;">
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="planner">
+        <div class="container w-75 p-0">
+            <h3>Quick and easy trip planner</h3>
+            <p>Pick a vibe and explore the top destinations in Azerbaijan</p>
+
+            <div class="planner-links row">
+                <div class="col-12 d-flex gap-3 d-flex align-items-center">
+                    <a href="#" class="btn rounded-5 active">
+                        <i class="fa-solid fa-heart me-1"></i>
+                        <span>Romance</span>
+                    </a>
+
+                    <a href="#" class="btn link text-black rounded-5">
+                        <i class="fa-solid fa-plane me-1"></i>
+                        <span>Flights</span>
+                    </a>
+
+                    <a href="#" class="btn link text-black rounded-5">
+                        <i class="fa-solid fa-car me-1"></i>
+                        <span>Car rentals</span>
+                    </a>
+
+                    <a href="#" class="btn link text-black rounded-5">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>Attractions</span>
+                    </a>
+
+                    <a href="#" class="btn link text-black rounded-5">
+                        <i class="fa-solid fa-taxi me-1"></i>
+                        <span>Airport taxis</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row gap-3 ms-1">
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 10.5rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/explore-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Guba</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">180 km from Baku</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 10.5rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/explore-img.jpeg" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Guba</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">180 km from Baku</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="inspiration">
+        <div class="container w-75 p-0">
+            <div class="header-row d-flex align-items-center justify-content-between mb-2">
+                <h3>Get inspiration for your next trip</h3>
+                <a href="#">More</a>
+            </div>
+
+            <div class="row d-flex flex-nowrap gap-2 ms-1">
+                <div class="col-6 p-0">
+                    <div class="card">
+                        <a href="#">
+                            <img src="./assets/inspiration-img.webp" class="card-img"
+                                style=" object-fit:cover; height: 367px;">
+                            <div class="card-img-overlay text-white d-flex flex-column justify-content-end ps-2">
+                                <h4>5 of the best hotels in Los Angeles</h4>
+                                <p class="m-0">From Hollywood to Beverly Hills discover 5 of the best hotels in Los
+                                    Angeles for your
+                                    stay</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.2rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/insp-img-1.webp" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black"> The 6 best Orlando hotels for families</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    Discover the best Orlando hotels for families for your vacation.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.2rem;">
+                        <a href="#" class="text-decoration-none">
+                            <img src="./assets/insp-img-2.webp" class="card-img-top rounded-1">
+                            <div class="card-body p-0 mt-3">
+                                <h6 class="card-title mb-1 text-black">Hotels</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    Jan 3-Jan 6, 2 adults
+                                    <br>
+                                    242 available
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="homes">
+        <div class="container w-75 p-0">
+            <div class="header-row d-flex align-items-center justify-content-between mb-2">
+                <h3>Homes guests love</h3>
+                <a href="#">Discover homes</a>
+            </div>
+
+
+            <div class="row gap-2 ms-1 d-flex  flex-nowrap">
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.5rem;">
+                        <a href="hotels.html" class="text-decoration-none">
+                            <img src="./assets/homes-img.webp" class="card-img-top " style="border-end-end-radius: 0;">
+                            <div class="card-body px-2 mt-3">
+                                <h6 class="card-title mb-1 text-black">Harbor View</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    United Kingdom, Isle Of Skye
+                                </p>
+                                <div class="ratings mb-3">
+                                    <div class="badge bg-primary py-2 me-1"
+                                        style="border-radius: 5px; border-bottom-left-radius: 0;">8,6</div>
+                                    <span>Wonderful · 144 reviews</span>
+                                </div>
+
+                                <div class="price d-flex align-items-end justify-content-end w-100">
+                                    <span>Starting from</span>
+                                    <h5 class="mb-0 ms-1">AZN 260</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.5rem;">
+                        <a href="hotels.html" class="text-decoration-none">
+                            <img src="./assets/homes-img.webp" class="card-img-top " style="border-end-end-radius: 0;">
+                            <div class="card-body px-2 mt-3">
+                                <h6 class="card-title mb-1 text-black">Harbor View</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    United Kingdom, Isle Of Skye
+                                </p>
+                                <div class="ratings mb-3">
+                                    <div class="badge bg-primary py-2 me-1"
+                                        style="border-radius: 5px; border-bottom-left-radius: 0;">8,6</div>
+                                    <span>Wonderful · 144 reviews</span>
+                                </div>
+
+                                <div class="price d-flex align-items-end justify-content-end w-100">
+                                    <span>Starting from</span>
+                                    <h5 class="mb-0 ms-1">AZN 260</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.5rem;">
+                        <a href="hotels.html" class="text-decoration-none">
+                            <img src="./assets/homes-img.webp" class="card-img-top " style="border-end-end-radius: 0;">
+                            <div class="card-body px-2 mt-3">
+                                <h6 class="card-title mb-1 text-black">Harbor View</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    United Kingdom, Isle Of Skye
+                                </p>
+                                <div class="ratings mb-3">
+                                    <div class="badge bg-primary py-2 me-1"
+                                        style="border-radius: 5px; border-bottom-left-radius: 0;">8,6</div>
+                                    <span>Wonderful · 144 reviews</span>
+                                </div>
+
+                                <div class="price d-flex align-items-end justify-content-end w-100">
+                                    <span>Starting from</span>
+                                    <h5 class="mb-0 ms-1">AZN 260</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.5rem;">
+                        <a href="hotels.html" class="text-decoration-none">
+                            <img src="./assets/homes-img.webp" class="card-img-top " style="border-end-end-radius: 0;">
+                            <div class="card-body px-2 mt-3">
+                                <h6 class="card-title mb-1 text-black">Harbor View</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    United Kingdom, Isle Of Skye
+                                </p>
+                                <div class="ratings mb-3">
+                                    <div class="badge bg-primary py-2 me-1"
+                                        style="border-radius: 5px; border-bottom-left-radius: 0;">8,6</div>
+                                    <span>Wonderful · 144 reviews</span>
+                                </div>
+
+                                <div class="price d-flex align-items-end justify-content-end w-100">
+                                    <span>Starting from</span>
+                                    <h5 class="mb-0 ms-1">AZN 260</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="unique">
+        <div class="container w-75 p-0">
+            <h3 class="mb-0">Stay at our top unique properties</h3>
+            <p>From castles and villas to boats and igloos, we have it all</p>
+
+            <div class="row gap-2 ms-1 d-flex  flex-nowrap">
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.5rem;">
+                        <a href="hotels.html" class="text-decoration-none">
+                            <img src="./assets/unique-img.webp" class="card-img-top " style="border-end-end-radius: 0;">
+                            <div class="card-body px-2 mt-3">
+                                <h6 class="card-title mb-1 text-black">Harbor View</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    United Kingdom, Isle Of Skye
+                                </p>
+                                <div class="ratings mb-3">
+                                    <div class="badge bg-primary py-2 me-1"
+                                        style="border-radius: 5px; border-bottom-left-radius: 0;">8,6</div>
+                                    <span>Wonderful · 144 reviews</span>
+                                </div>
+
+                                <div class="price d-flex align-items-end justify-content-end w-100">
+                                    <span>Starting from</span>
+                                    <h5 class="mb-0 ms-1">AZN 260</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.5rem;">
+                        <a href="hotels.html" class="text-decoration-none">
+                            <img src="./assets/unique-img.webp" class="card-img-top " style="border-end-end-radius: 0;">
+                            <div class="card-body px-2 mt-3">
+                                <h6 class="card-title mb-1 text-black">Harbor View</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    United Kingdom, Isle Of Skye
+                                </p>
+                                <div class="ratings mb-3">
+                                    <div class="badge bg-primary py-2 me-1"
+                                        style="border-radius: 5px; border-bottom-left-radius: 0;">8,6</div>
+                                    <span>Wonderful · 144 reviews</span>
+                                </div>
+
+                                <div class="price d-flex align-items-end justify-content-end w-100">
+                                    <span>Starting from</span>
+                                    <h5 class="mb-0 ms-1">AZN 260</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.5rem;">
+                        <a href="hotels.html" class="text-decoration-none">
+                            <img src="./assets/unique-img.webp" class="card-img-top " style="border-end-end-radius: 0;">
+                            <div class="card-body px-2 mt-3">
+                                <h6 class="card-title mb-1 text-black">Harbor View</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    United Kingdom, Isle Of Skye
+                                </p>
+                                <div class="ratings mb-3">
+                                    <div class="badge bg-primary py-2 me-1"
+                                        style="border-radius: 5px; border-bottom-left-radius: 0;">8,6</div>
+                                    <span>Wonderful · 144 reviews</span>
+                                </div>
+
+                                <div class="price d-flex align-items-end justify-content-end w-100">
+                                    <span>Starting from</span>
+                                    <h5 class="mb-0 ms-1">AZN 260</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto p-0">
+                    <div class="card border-0" style="width: 16.5rem;">
+                        <a href="hotels.html" class="text-decoration-none">
+                            <img src="./assets/unique-img.webp" class="card-img-top " style="border-end-end-radius: 0;">
+                            <div class="card-body px-2 mt-3">
+                                <h6 class="card-title mb-1 text-black">Harbor View</h6>
+                                <p class="card-text" style="font-size: 14px; color: #474747;">
+                                    United Kingdom, Isle Of Skye
+                                </p>
+                                <div class="ratings mb-3">
+                                    <div class="badge bg-primary py-2 me-1"
+                                        style="border-radius: 5px; border-bottom-left-radius: 0;">8,6</div>
+                                    <span>Wonderful · 144 reviews</span>
+                                </div>
+
+                                <div class="price d-flex align-items-end justify-content-end w-100">
+                                    <span>Starting from</span>
+                                    <h5 class="mb-0 ms-1">AZN 260</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="banners">
+        <div class="container w-75 p-0">
+            <div class="row ps-1">
+                <div class="col-12 banner-1">
+                    <div class="card p-2">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="./assets/banner-card-img.png" style="width: 160px;">
+                            </div>
+                            <div class="col-9 pt-3">
+                                <h4>Get instant discounts</h4>
+                                <p class="w-50">Just sign into your Booking.com account and look for the blue Genius
+                                    logo to save</p>
+                                <div class="buttons">
+                                    <button class="btn btn-outline-primary me-1">Sign in</button>
+                                    <button class="btn text-primary register">Register</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 banner-2">
+                    <div class="card" style="height: 260px; overflow: hidden;">
+                        <div class="row justify-content-between">
+                            <div class="col-2">
+
+                            </div>
+                            <div class="col-5  bg-primary p-0 d-flex justify-content-center flex-column">
+                                <h3 class="text-white ms-5">Find villas <br> for your next trip</h3>
+                                <button class="ms-5">Discover homes</button>
+                            </div>
+                            <div class="col-4">
+                                <img src="./assets/banner-2.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destination">
+        <div class="container w-75 p-0">
+            <h3>Destinations we love</h3>
+
+            <ul class="nav nav-pills d-flex gap-2">
+                <li class="nav-item">
+                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#region">Regions</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#cities">Cities</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#interests">Place of
+                        interests</button>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane container active" id="region">
+                    <div class="row">
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Zanzibar</a>
+                                    <span>248 properties</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="tab-pane container fade" id="cities">
+                    <div class="row">
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Liverpool</a>
+                                    <span>1079 hotels</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="interests">
+                    <div class="row">
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>  
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>  
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>  
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>  
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled">
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>
+                                <li class="d-flex flex-column">
+                                    <a href="#">Disneyland</a>
+                                    <span>248 properties</span>
+                                </li>  
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sign-up">
+        <div class="container d-flex flex-column align-items-center justify-content-center">
+            <p class="text-white">Save time, save money!</p>
+            <span>Sign up and we'll send the best deals to you</span>
+            <div class="input-group gap-2 justify-content-center">
+                <input type="email" placeholder="Your email address" class="from-control">
+                <button class="btn btn-primary">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="property">
+        <div class="container-fluid d-flex flex-column align-items-center">
+            <a href="#" class="btn btn-outline-light btn-sm">List your property</a>
+            <div class="line"></div>
+            <div class="container w-75">
+                <ul>
+                    <li><a href="#">Mobile version</a></li>
+                    <li><a href="#">Your account</a></li>
+                    <li><a href="#">Make changes online to your book</a></li>
+                    <li><a href="#">Customer Service Help</a></li>
+                    <li><a href="#">Become a affiliate</a></li>
+                    <li><a href="#">Booking.com for Business</a></li>
+                </ul>
+            </div>
+      
+        </div>
+    </section>
+
+    <footer>
+        <div class="container w-75 p-0">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Countries</a></li>
+
+                    </ul>
+                </div>
+               
+                <div class="col-12 text-center mt-5">
+                    <a href="#" class="text-decoration-none login">Extranet Log-in</a>
+                </div>
+                <div class="col-12 mt-3">
+                    <small style="font-size: 11px; color: #1a1a1a;">
+                        Copyright © 1996–2024 Booking.com™. All rights reserved.
+                    </small>
+                </div>
+
+                <div class="col-12 text-center mt-5">
+                   <span style="font-size: 12px; color: #6b6b6b;">Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services.</span>
+                </div>
+
+                <div class="col  d-flex justify-content-center gap-5 p-4">
+                    <img src="./assets/footer-img.png" alt="">
+                    <img src="./assets/footer-img.png" alt="">
+                    <img src="./assets/footer-img.png" alt="">
+                    <img src="./assets/footer-img.png" alt="">
+                    <img src="./assets/footer-img.png" alt="">
+                    <img src="./assets/footer-img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
